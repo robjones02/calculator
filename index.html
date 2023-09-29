@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="text-container">
+        <p class="js-text output-text">0</p>
+    </div>
+
+    <div class="grid-container">
+
+        <button onClick="
+            numberArray = [];
+            textElement.innerHTML = '0';
+        "class="clear-button">AC</button>
+        
+        
+        <button class="empty"></button>
+        <button class="empty"></button>
+
+
+        <button class="operator" onClick="
+            operator = 'division';
+            firstNumber = sumArray(numberArray);
+            textElement.innerHTML = firstNumber;
+            console.log(firstNumber);
+            numberArray.splice(0, numberArray.length);
+        ">/</button>
+
+        <button class="js-number" onClick="
+            numberArray.push('7');
+            textElement.innerHTML = sumArray(numberArray);
+        ">7</button>
+        <button class="js-number" onClick="
+            numberArray.push('8');
+            textElement.innerHTML = sumArray(numberArray);
+        ">8</button>
+        <button class="js-number" onClick="
+            numberArray.push('9');
+            textElement.innerHTML = sumArray(numberArray);
+        ">9</button>
+
+        <button class="operator" onClick="
+            operator = 'multiplication';
+            firstNumber = sumArray(numberArray);
+            textElement.innerHTML = firstNumber;
+            console.log(firstNumber);
+            numberArray.splice(0, numberArray.length);
+        ">X</button>
+
+        <button class="js-number" onClick="
+            numberArray.push('4');
+            textElement.innerHTML = sumArray(numberArray);
+        ">4</button>
+        <button class="js-number" onClick="
+            numberArray.push('5');
+            textElement.innerHTML = sumArray(numberArray);
+        ">5</button>
+        <button class="js-number" onClick="
+            numberArray.push('6');
+            textElement.innerHTML = sumArray(numberArray);
+        ">6</button>
+
+        <button class="operator" onClick="
+            operator = 'subtraction';
+            firstNumber = sumArray(numberArray);
+            textElement.innerHTML = firstNumber;
+            console.log(firstNumber);
+            numberArray.splice(0, numberArray.length);
+        ">-</button>
+
+        <button class="js-number" onClick="
+            numberArray.push('1');
+            textElement.innerHTML = sumArray(numberArray);
+        "
+        >1</button>
+        <button class="js-number" onClick="
+            numberArray.push('2');
+            textElement.innerHTML = sumArray(numberArray);
+        ">2</button>
+        <button class="js-number" onClick="
+            numberArray.push('3');
+            textElement.innerHTML = sumArray(numberArray);
+        ">3</button>
+
+        <button class="operator" onClick="
+            operator = 'addition';
+            firstNumber = sumArray(numberArray);
+            console.log(firstNumber);
+            numberArray.splice(0, numberArray.length);
+        ">+</button>
+
+        <button class="js-number zero-button" onClick="
+            numberArray.push('0');
+            textElement.innerHTML = sumArray(numberArray);
+        ">0</button>
+
+        <button class="empty"></button>  
+        
+        <button onClick="
+            numberArray.push('.');
+            textElement.innerHTML = sumArray(numberArray);
+        ">.</button>
+    
+        <button class="equals" onClick="
+            calculateResult();
+        ">=</button>    
+    </div>
+
+
+    <script src="index.js"></script>
+</body>
+</html>
